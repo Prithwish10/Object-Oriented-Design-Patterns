@@ -4,7 +4,8 @@ class SingletonL{
     private SingletonL(){
         System.out.println("Creating ...");
     }
-    // A global point to access the instance
+    // A global point to access the instance.
+    // Thread safe
     public static synchronized SingletonL getInstance(){
         if(soleInstance == null)
             soleInstance = new SingletonL();
